@@ -6,6 +6,7 @@ function sumar()
 {	
     var num1;
     var num2;
+    var sumar;
 
     num1 = parseInt(document.getElementById("numeroUno").value);
     num2 = parseInt(document.getElementById("numeroDos").value);
@@ -21,6 +22,7 @@ function restar()
 {
     var num1;
     var num2;
+    var resta;
 
     num1 = parseInt(document.getElementById("numeroUno").value);
     num2 = parseInt(document.getElementById("numeroDos").value);
@@ -33,6 +35,7 @@ function multiplicar()
 { 
     var num1;
     var num2;
+    var multiplicar;
 
     num1 = parseInt(document.getElementById("numeroUno").value);
     num2 = parseInt(document.getElementById("numeroDos").value);
@@ -47,6 +50,7 @@ function dividir()
 {
     var num1;
     var num2;
+    var dividir;
 
     num1 = parseInt(document.getElementById("numeroUno").value);
     num2 = parseInt(document.getElementById("numeroDos").value);
