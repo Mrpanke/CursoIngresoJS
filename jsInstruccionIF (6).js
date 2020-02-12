@@ -20,4 +20,19 @@ alert("Usted es mayor de edad");
 }
 
 
-}//FIN DE LA FUNCIÓN
+}//Se puede resolver de diferentes formas 
+
+
+//Poniendo en orden las condiciones se puede reducir las condiciones y dejando por descarte la ultima
+/*  if(edad < 13){
+
+    alert("niño");
+     
+}else if (edad <= 17){
+
+    alert("adolecente");
+}else
+{
+
+    alert("adulto");
+}*/
