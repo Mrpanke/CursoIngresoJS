@@ -20,6 +20,7 @@ var cantCemento;
 
 largo = parseInt(document.getElementById("Largo").value);
 ancho = parseInt(document.getElementById("Ancho").value);
+radio = parseInt(document.getElementById("Radio").value);
 
 resultado = (largo * 2 ) + (ancho * 2);
 
@@ -29,8 +30,7 @@ alert("Se nesecitan " + (resultado * 3) + "m" + " de alambre para esas dimension
 function Circulo () 
 {
 
-    radio = parseInt(document.getElementById("Radio").value);
-
+    
     resultado = 2 * 3.14 * radio; 
 
     alert("Se nesecitan " + (resultado * 3) + "m" + " de alambre. ");
@@ -41,9 +41,6 @@ function Circulo ()
 function Materiales () 
 {
 
-
-	largo = parseInt(document.getElementById("Largo").value);
-    ancho = parseInt(document.getElementById("Ancho").value);
 
     area = largo * ancho;
 
