@@ -44,7 +44,7 @@ var precioConDescuento;
 
     
 
-    }else if(cantLamparas = 5 ){
+    }else if(cantLamparas == 5 ){
          
             switch(marca){
                 case "ArgentinaLuz":
@@ -52,17 +52,19 @@ var precioConDescuento;
                     descuento = ((cantLamparas * precioLapm) * 40) / 100;
                     precioConDescuento = preciototal - descuento;
 
-                if(precioConDescuento > 120){
+                    if(precioConDescuento > 120){
 
                     ingresoBruto = (precioConDescuento * 10) /100
                     precioConIngre = precioConDescuento + ingresoBruto
                     document.getElementById("precioDescuento").value = "El precio total es de: " +  precioConIngre + "$" + " (IIBB Usted pago: " + ingresoBruto + "$)";
 
-                }else{
+                    }else{
 
-                    document.getElementById("precioDescuento").value = "El precio con descuento es de: " +  precioConDescuento + "$";
-                }
+                        document.getElementById("precioDescuento").value = "El precio con descuento es de: " +  precioConDescuento + "$";
+                    }
+                break;
                 default:
+
                     preciototal = cantLamparas * precioLapm;
                     descuento = ((cantLamparas * precioLapm) * 30) / 100;
                     precioConDescuento = preciototal - descuento;
@@ -76,7 +78,7 @@ var precioConDescuento;
 
             }
 
-    }else if(cantLamparas = 4){
+    }else if(cantLamparas == 4){
 
             switch(marca){
 
@@ -116,7 +118,7 @@ var precioConDescuento;
                         }
             }
 
-    }else{
+    }else if(cantLamparas == 3 ){
 
             switch(marca){
 
@@ -172,6 +174,10 @@ var precioConDescuento;
                             document.getElementById("precioDescuento").value = "El precio con descuento es de: " +  precioConDescuento + "$";
                         }
                 }
+        }else{
+
+            preciototal = cantLamparas * precioLapm;
+            document.getElementById("precioDescuento").value = "El precio de su compra es de: " +  preciototal + "$ (No corresponde ningun descuento)";
         }
 
 
