@@ -8,7 +8,193 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
-{
- 	
+function CalcularPrecio () {
+var cantLamparas;
+var precioLapm = 35;
+var preciototal;
+var marca;
+var precioConIngre;
+var ingresoBruto;
+var descuento;
+var precioConDescuento;
+
+        cantLamparas = parseInt(document.getElementById("Cantidad").value);
+        marca = document.getElementById("Marca").value
+
+
+
+
+
+    if(cantLamparas >= 6 ){
+
+            preciototal = cantLamparas * precioLapm;
+            descuento = ( preciototal * 50) / 100;
+            precioConDescuento = preciototal - descuento;
+
+                if(precioConDescuento > 120){
+
+                    ingresoBruto = (precioConDescuento * 10) /100
+                    precioConIngre = precioConDescuento + ingresoBruto
+                    document.getElementById("precioDescuento").value = "El precio total es de: " +  precioConIngre + "$" + " (IIBB Usted pago: " + ingresoBruto + "$)";
+
+                }else{
+
+                    document.getElementById("precioDescuento").value = "El precio con descuento es de: " +  precioConDescuento + "$";
+                }
+
+    
+
+    }else if(cantLamparas = 5 ){
+         
+            switch(marca){
+                case "ArgentinaLuz":
+                    preciototal = cantLamparas * precioLapm;
+                    descuento = ((cantLamparas * precioLapm) * 40) / 100;
+                    precioConDescuento = preciototal - descuento;
+
+                if(precioConDescuento > 120){
+
+                    ingresoBruto = (precioConDescuento * 10) /100
+                    precioConIngre = precioConDescuento + ingresoBruto
+                    document.getElementById("precioDescuento").value = "El precio total es de: " +  precioConIngre + "$" + " (IIBB Usted pago: " + ingresoBruto + "$)";
+
+                }else{
+
+                    document.getElementById("precioDescuento").value = "El precio con descuento es de: " +  precioConDescuento + "$";
+                }
+                default:
+                    preciototal = cantLamparas * precioLapm;
+                    descuento = ((cantLamparas * precioLapm) * 30) / 100;
+                    precioConDescuento = preciototal - descuento;
+    
+                    if(precioConDescuento > 120){
+    
+                        ingresoBruto = (precioConDescuento * 10) /100
+                        precioConIngre = precioConDescuento + ingresoBruto
+                        document.getElementById("precioDescuento").value = "El precio total es de: " +  precioConIngre + "$" + " (IIBB Usted pago: " + ingresoBruto + "$)";
+                    }   
+
+            }
+
+    }else if(cantLamparas = 4){
+
+            switch(marca){
+
+                case "ArgentinaLuz":
+                case "FelipeLamparas":
+
+                    preciototal = cantLamparas * precioLapm;
+                    descuento = ( preciototal * 25) / 100;
+                    precioConDescuento = preciototal - descuento;
+    
+                        if(precioConDescuento > 120){
+    
+                            ingresoBruto = (precioConDescuento * 10) /100
+                            precioConIngre = precioConDescuento + ingresoBruto
+                            document.getElementById("precioDescuento").value = "El precio total es de: " +  precioConIngre + "$" + " (IIBB Usted pago: " + ingresoBruto + "$)";
+    
+                        }else{
+    
+                            document.getElementById("precioDescuento").value = "El precio con descuento es de: " +  precioConDescuento + "$";
+                        }
+                break;
+            
+                default:
+                    preciototal = cantLamparas * precioLapm;
+                    descuento = ( preciototal * 20) / 100;
+                    precioConDescuento = preciototal - descuento;
+    
+                        if(precioConDescuento > 120){
+    
+                            ingresoBruto = (precioConDescuento * 10) /100
+                            precioConIngre = precioConDescuento + ingresoBruto
+                            document.getElementById("precioDescuento").value = "El precio total es de: " +  precioConIngre + "$" + " (IIBB Usted pago: " + ingresoBruto + "$)";
+    
+                        }else{
+    
+                            document.getElementById("precioDescuento").value = "El precio con descuento es de: " +  precioConDescuento + "$";
+                        }
+            }
+
+    }else{
+
+            switch(marca){
+
+                case "ArgentinaLuz":
+                    preciototal = cantLamparas * precioLapm;
+                    descuento = ( preciototal * 15) / 100;
+                    precioConDescuento = preciototal - descuento;
+    
+                        if(precioConDescuento > 120){
+    
+                            ingresoBruto = (precioConDescuento * 10) /100
+                            precioConIngre = precioConDescuento + ingresoBruto
+                            document.getElementById("precioDescuento").value = "El precio total es de: " +  precioConIngre + "$" + " (IIBB Usted pago: " + ingresoBruto + "$)";
+    
+                        }else{
+    
+                            document.getElementById("precioDescuento").value = "El precio con descuento es de: " +  precioConDescuento + "$";
+                        }
+
+                break;
+
+                case "FelipeLamparas":
+                    preciototal = cantLamparas * precioLapm;
+                    descuento = ( preciototal *10) / 100;
+                    precioConDescuento = preciototal - descuento;
+    
+                        if(precioConDescuento > 120){
+    
+                            ingresoBruto = (precioConDescuento * 10) /100
+                            precioConIngre = precioConDescuento + ingresoBruto
+                            document.getElementById("precioDescuento").value = "El precio total es de: " +  precioConIngre + "$" + " (IIBB Usted pago: " + ingresoBruto + "$)";
+    
+                        }else{
+    
+                            document.getElementById("precioDescuento").value = "El precio con descuento es de: " +  precioConDescuento + "$";
+                        }
+
+                break;
+
+                default:
+                    preciototal = cantLamparas * precioLapm;
+                    descuento = ( preciototal *5) / 100;
+                    precioConDescuento = preciototal - descuento;
+    
+                        if(precioConDescuento > 120){
+    
+                            ingresoBruto = (precioConDescuento * 10) /100
+                            precioConIngre = precioConDescuento + ingresoBruto
+                            document.getElementById("precioDescuento").value = "El precio total es de: " +  precioConIngre + "$" + " (IIBB Usted pago: " + ingresoBruto + "$)";
+    
+                        }else{
+    
+                            document.getElementById("precioDescuento").value = "El precio con descuento es de: " +  precioConDescuento + "$";
+                        }
+                }
+        }
+
+
+
+
+
+
+
+
+
+
+
 }
+     
+
+
+
+
+
+
+
+
+
+
+
+
